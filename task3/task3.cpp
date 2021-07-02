@@ -47,6 +47,7 @@ int main()
 		}
 	}
 	cout << sum;
+	delete Node;
 	return 0;
 }
 
