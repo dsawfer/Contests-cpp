@@ -18,7 +18,6 @@ struct Node
 string checkWord(string word, int& sum, int& readLength, Node* root);
 Node* searchKey(string key, Node *node);
 void addKey(string key, Node* node);
-//void deleteKey(string key, Node& node);
 
 int main()
 {
@@ -63,16 +62,11 @@ string checkWord(string word, int& sum, int& readLength, Node* root)
 		searchRes = searchKey(key, root);
 		if (searchRes == nullptr) {
 			continue;
-			//addKey(word, root);
-			////sum += word.size();
-			//return nullptr;
 		}
 		else if (searchRes->unambiguous){
 			return searchRes->key;
 		}
 	}
-	//addKey(word, root);
-	//sum += word.size();
 	return "";
 }
 
@@ -104,8 +98,7 @@ void addKey(string key, Node* node)
 	for (unsigned int i = 0; i <= end; i++)
 	{
 		if (i == end) {
-			curNode->key = key;			//fix it
-			//curNode->unambiguous = true;
+			curNode->key = key;
 			curNode->terminal = true;
 			return;
 		}
