@@ -13,7 +13,7 @@ int main(void)
 {
 	int n = 0, m = 0;
 	cin >> n;
-	std::cin.ignore(32767, '\n');
+	cin.ignore(32767, '\n');
 	string *seating = new string[n];
 	for (int i = 0; i < n; i++)
 	{
@@ -21,7 +21,7 @@ int main(void)
 	}
 
 	cin >> m;
-	std::cin.ignore(32767, '\n');
+	cin.ignore(32767, '\n');
 	string *commands = new string[m];
 	for (int i = 0; i < m; i++)
 	{
